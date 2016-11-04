@@ -43,8 +43,9 @@ int is_prime(long long int x)
   {
   if(x%i==0)
   return 0;
-  else
-  return 1;
   }
+  // In the for loop all is checked, and there
+  // is no factor, so x is prime, we return 1
+  return 1;
 
 }
