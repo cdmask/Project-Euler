@@ -3,9 +3,10 @@
 //The prime factors of 13195 are 5, 7, 13 and 29.
 //What is the largest prime factor of the number 600851475143 ?
 #include<iostream>
+#include<cmath>
 using namespace std;
 
-int is_prime(long long int);
+bool is_prime(long long int x);
 
 
 int main(void) {
@@ -35,11 +36,11 @@ cout<<max;
   return 0;
 }
 //Need to check this for loop
-int is_prime(long long int x)
+bool is_prime(long long int x)
 {
   if (x==2||x==3)
   return 1;
-  for (long long int i=2;i<=x/2;i++)
+  for (long long int i=2;i<int(sqrt(x)+1);i++)
   {
   if(x%i==0)
   return 0;
